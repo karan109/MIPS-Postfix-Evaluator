@@ -1,16 +1,14 @@
 .globl main
 .data
-	message: .asciiz "Enter: "
-	error_msg: .asciiz "Enter a valid string\n"
-	mult_msg: .asciiz "Multiplication detected\n"
-	add_msg: .asciiz "Addition detected\n"
-	sub_msg: .asciiz "Subtraction detected\n"
-	exit_msg: .asciiz "OK Bye\n"
-	userInput: .space 20 # Max length of string user can input
+	input_msg: .asciiz "Enter: "
+	error_msg: .asciiz "Invalid postfix string\n"
+	ans_msg  : .asciiz "Answer: "
+	userInput: .space 105 # Max length of string user can input
 .text
 	main:
+		# Display inputs message
 		li $v0, 4
-		la $a0, message
+		la $a0, input_msg
 		syscall
 
 		# Take string input
@@ -19,22 +17,26 @@
 		li $a1, 20
 		syscall
 
-		# Load input into s1
+		# Load input string address into s1
 		la $s1 userInput
 
-		# Store stack pointer address
-		move $t0, $sp
-
 		# Using $t1 to store top element of stack to save calls to stack.
-		# li $t1, 0
+		li $t1, 0
 
+		# Store initial stack pointer address for checking empty condition
+		# 1 extra space used for storing initial value of 0 during first iteration of loop
+		addi $t0, $sp, -4
+
+
+		# Loop over each character of the string
 		loop:
-
 			# Point to head of s1
 			lb $t3, ($s1)
 
-			# Newline detected, exit
+			
+			# Newline or Null detected => exit
 			beq $t3, 10, exit
+			beq $t3, 0, exit
 
 			# Update pointer to point to next char
 			addi $s1, $s1, 1
@@ -57,73 +59,85 @@
 			jal numeral
 
 		exit:
-			li $v0, 1
-			lw $a0, 0($sp)
-			add $sp, $sp, 4
-			bne $sp, $t0, error
+			# If stack not empty at end or input string was empty then error
+			bne $sp, $t0, error 
+
+			# Print answer message
+			li $v0, 4
+			la $a0, ans_msg
 			syscall
+
+			# Print answer
+			li $v0, 1
+			move $a0, $t1
+			syscall
+			
+			# Print newline
 			li $v0, 11
 			la $a0, '\n'
 			syscall
-			li $v0, 4
-			la $a0, exit_msg
+
+			# Reset stack pointer
+			addi $sp, $t0, 4 
+
+			# Terminate execution
+			li $v0, 10
 			syscall
-			li $v0, 10						# load 10 in $v0 for termination
-			syscall							# syscall
 		
 		numeral:
+			# Add current top element stored in $t1 to the stack
 			addi $sp, $sp, -4
-			sw $t3, 0($sp)	
-			li $v0, 1
-			move $a0, $t3
-			syscall
-			li $v0, 11
-			la $a0, '\n'
-			syscall
+			sw $t1, 0($sp)
+			
+			# Transfer current input to $t1
+			move $t1, $t3
+
+			# jump back to loop to read the next character
 			jal loop
 
 		multiply:
+			# Top value present in $t1 and load next in $t2 and apply operator
 			jal load_values_for_operator
-			mul $t1, $t1, $t2
-			addi $sp, $sp, -4
-			sw $t1, 0($sp)
-			li $v0, 4
-			la $a0, mult_msg
-			syscall
+			mul $t1, $t2, $t1
+
+			# jump back to loop to read the next character
 			jal loop
 
 		addition:
+			# Top value present in $t1 and load next in $t2 and apply operator
 			jal load_values_for_operator
-			add $t1, $t1, $t2
-			addi $sp, $sp, -4
-			sw $t1, 0($sp)
-			li $v0, 4
-			la $a0, add_msg
-			syscall
+			add $t1, $t2, $t1
+			
+			# jump back to loop to read the next character
 			jal loop
 
 		subtract:
+			# Top value present in $t1 and load next in $t2 and apply operator
 			jal load_values_for_operator
-			sub $t1, $t1, $t2
-			addi $sp, $sp, -4
-			sw $t1, 0($sp)
-			li $v0, 4
-			la $a0, sub_msg
-			syscall
+			sub $t1, $t2, $t1
+			
+			# jump back to loop to read the next character
 			jal loop
 		
+		load_values_for_operator: 
+			# If stack pointer at base then stack is empty
+			# This implies an error due to excess of operators
+			beq $sp, $t0, error
+			# Load stack top most value in $t2
+			lw $t2, 0($sp)
+			addi $sp, $sp, 4
+			jr $ra
+
 		error:
+			# Print error message
 			li $v0, 4
 			la $a0, error_msg
 			syscall
-			li $v0, 10						# load 10 in $v0 for termination
-			syscall							# syscall
+			
+			# Reset stack pointer
+			addi $sp, $t0, 4 
 
-		load_values_for_operator: 
-			beq $sp, $t0, error
-			lw $t2, 0($sp)
-			addi $sp, $sp, 4
-			beq $sp, $t0, error
-			lw $t1, 0($sp)
-			addi $sp, $sp, 4
-			jr $ra
+			# Terminate Execution
+			li $v0, 10
+			syscall
+			
