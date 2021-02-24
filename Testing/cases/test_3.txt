@@ -1,0 +1,5 @@
+Infix: (1+5)
+
+Postfix: 15+
+
+Answer: 6
