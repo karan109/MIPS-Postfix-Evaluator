@@ -3,7 +3,7 @@
 	input_msg: .asciiz "Enter: "
 	error_msg: .asciiz "Invalid postfix string\n"
 	ans_msg  : .asciiz "Answer: "
-	userInput: .space 105 # Max length of string user can input
+	userInput: .space 1005 # Max length of string user can input
 .text
 	main:
 		# Display inputs message
@@ -14,7 +14,7 @@
 		# Take string input
 		li $v0, 8
 		la $a0, userInput
-		li $a1, 20
+		li $a1, 1005
 		syscall
 
 		# Load input string address into s1
