@@ -36,11 +36,11 @@ string exec(string command) {
 int main(){
 	fstream of;
 	of.open("RandomCases.txt", ios::out);
+	srand(time(0));
 	int case_ct = 0;
 	for(int i=0;i<100;i++){
 		int n = rand()%500;
 		if(n%2==0) n++;
-		srand(time(0));
 		vector<int> nums(n/2+1);
 		vector<int> op_ct(n/2);
 		int ct = 0;
