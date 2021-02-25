@@ -1,5 +1,0 @@
-Infix: ((5*2)+1)
-
-Postfix: 52*1+
-
-Answer: 11

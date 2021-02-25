@@ -1,0 +1,707 @@
+Test Case #1
+Postfix Length: 3
+Infix Expression: (6*1)
+Postfix Expression: 61*
+MIPS Answer: 6
+C++ Answer: 6
+
+Test Case #2
+Postfix Length: 9
+Infix Expression: ((((6*3)*6)-6)+4)
+Postfix Expression: 63*6*6-4+
+MIPS Answer: 106
+C++ Answer: 106
+
+Test Case #3
+Postfix Length: 5
+Infix Expression: ((4-4)*5)
+Postfix Expression: 44-5*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #4
+Postfix Length: 3
+Infix Expression: (3-5)
+Postfix Expression: 35-
+MIPS Answer: -2
+C++ Answer: -2
+
+Test Case #5
+Postfix Length: 9
+Infix Expression: ((0+(0*(1*7)))*4)
+Postfix Expression: 0017**+4*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #6
+Postfix Length: 9
+Infix Expression: (((9*5)*(4+2))*1)
+Postfix Expression: 95*42+*1*
+MIPS Answer: 270
+C++ Answer: 270
+
+Test Case #7
+Postfix Length: 11
+Infix Expression: (((4-2)-(8+0))*(9+5))
+Postfix Expression: 42-80+-95+*
+MIPS Answer: -84
+C++ Answer: -84
+
+Test Case #8
+Postfix Length: 5
+Infix Expression: ((0-7)*2)
+Postfix Expression: 07-2*
+MIPS Answer: -14
+C++ Answer: -14
+
+Test Case #9
+Postfix Length: 11
+Infix Expression: ((((8*9)*(9+7))-3)+2)
+Postfix Expression: 89*97+*3-2+
+MIPS Answer: 1151
+C++ Answer: 1151
+
+Test Case #10
+Postfix Length: 11
+Infix Expression: (((((6-8)+3)-4)*5)*8)
+Postfix Expression: 68-3+4-5*8*
+MIPS Answer: -120
+C++ Answer: -120
+
+Test Case #11
+Postfix Length: 3
+Infix Expression: (3-8)
+Postfix Expression: 38-
+MIPS Answer: -5
+C++ Answer: -5
+
+Test Case #12
+Postfix Length: 3
+Infix Expression: (2*2)
+Postfix Expression: 22*
+MIPS Answer: 4
+C++ Answer: 4
+
+Test Case #13
+Postfix Length: 9
+Infix Expression: ((((2*6)*5)+0)-5)
+Postfix Expression: 26*5*0+5-
+MIPS Answer: 55
+C++ Answer: 55
+
+Test Case #14
+Postfix Length: 7
+Infix Expression: ((2*4)*(0+4))
+Postfix Expression: 24*04+*
+MIPS Answer: 32
+C++ Answer: 32
+
+Test Case #15
+Postfix Length: 9
+Infix Expression: ((((3+5)*7)+8)-1)
+Postfix Expression: 35+7*8+1-
+MIPS Answer: 63
+C++ Answer: 63
+
+Test Case #16
+Postfix Length: 9
+Infix Expression: (((2*(4+3))*1)-4)
+Postfix Expression: 243+*1*4-
+MIPS Answer: 10
+C++ Answer: 10
+
+Test Case #17
+Postfix Length: 11
+Infix Expression: (((6*(2*4))-7)-(6-2))
+Postfix Expression: 624**7-62--
+MIPS Answer: 37
+C++ Answer: 37
+
+Test Case #18
+Postfix Length: 7
+Infix Expression: ((3*1)*(2*9))
+Postfix Expression: 31*29**
+MIPS Answer: 54
+C++ Answer: 54
+
+Test Case #19
+Postfix Length: 11
+Infix Expression: (((1-((3-2)+4))+5)+7)
+Postfix Expression: 132-4+-5+7+
+MIPS Answer: 8
+C++ Answer: 8
+
+Test Case #20
+Postfix Length: 7
+Infix Expression: ((2-4)*(5*2))
+Postfix Expression: 24-52**
+MIPS Answer: -20
+C++ Answer: -20
+
+Test Case #21
+Postfix Length: 9
+Infix Expression: (((9+3)*(9+2))*6)
+Postfix Expression: 93+92+*6*
+MIPS Answer: 792
+C++ Answer: 792
+
+Test Case #22
+Postfix Length: 9
+Infix Expression: ((7+((4*4)*4))*6)
+Postfix Expression: 744*4*+6*
+MIPS Answer: 426
+C++ Answer: 426
+
+Test Case #23
+Postfix Length: 9
+Infix Expression: ((5*((4-2)+0))+0)
+Postfix Expression: 542-0+*0+
+MIPS Answer: 10
+C++ Answer: 10
+
+Test Case #24
+Postfix Length: 11
+Infix Expression: ((((5-6)*(6*9))+4)+4)
+Postfix Expression: 56-69**4+4+
+MIPS Answer: -46
+C++ Answer: -46
+
+Test Case #25
+Postfix Length: 9
+Infix Expression: ((((6*9)-3)*9)-6)
+Postfix Expression: 69*3-9*6-
+MIPS Answer: 453
+C++ Answer: 453
+
+Test Case #26
+Postfix Length: 5
+Infix Expression: ((5*9)-5)
+Postfix Expression: 59*5-
+MIPS Answer: 40
+C++ Answer: 40
+
+Test Case #27
+Postfix Length: 11
+Infix Expression: (((5+5)+((7-0)-2))+3)
+Postfix Expression: 55+70-2-+3+
+MIPS Answer: 18
+C++ Answer: 18
+
+Test Case #28
+Postfix Length: 11
+Infix Expression: ((((1*(9*6))*1)+3)-0)
+Postfix Expression: 196**1*3+0-
+MIPS Answer: 57
+C++ Answer: 57
+
+Test Case #29
+Postfix Length: 11
+Infix Expression: ((((6+2)*(4-1))-7)-4)
+Postfix Expression: 62+41-*7-4-
+MIPS Answer: 13
+C++ Answer: 13
+
+Test Case #30
+Postfix Length: 7
+Infix Expression: (((4-7)+7)*8)
+Postfix Expression: 47-7+8*
+MIPS Answer: 32
+C++ Answer: 32
+
+Test Case #31
+Postfix Length: 9
+Infix Expression: ((((4-9)-1)+5)*9)
+Postfix Expression: 49-1-5+9*
+MIPS Answer: -9
+C++ Answer: -9
+
+Test Case #32
+Postfix Length: 9
+Infix Expression: ((1+((1*1)-9))+5)
+Postfix Expression: 111*9-+5+
+MIPS Answer: -2
+C++ Answer: -2
+
+Test Case #33
+Postfix Length: 11
+Infix Expression: ((8+(6+((7+7)+3)))-2)
+Postfix Expression: 8677+3+++2-
+MIPS Answer: 29
+C++ Answer: 29
+
+Test Case #34
+Postfix Length: 9
+Infix Expression: ((((9*3)*1)+1)*0)
+Postfix Expression: 93*1*1+0*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #35
+Postfix Length: 3
+Infix Expression: (2-5)
+Postfix Expression: 25-
+MIPS Answer: -3
+C++ Answer: -3
+
+Test Case #36
+Postfix Length: 9
+Infix Expression: (((0-0)*1)-(1*9))
+Postfix Expression: 00-1*19*-
+MIPS Answer: -9
+C++ Answer: -9
+
+Test Case #37
+Postfix Length: 11
+Infix Expression: (((7*0)+(7*(7+0)))-0)
+Postfix Expression: 70*770+*+0-
+MIPS Answer: 49
+C++ Answer: 49
+
+Test Case #38
+Postfix Length: 9
+Infix Expression: ((0-(6-(9-3)))*4)
+Postfix Expression: 0693---4*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #39
+Postfix Length: 11
+Infix Expression: ((0+6)+(((0*0)+7)*1))
+Postfix Expression: 06+00*7+1*+
+MIPS Answer: 13
+C++ Answer: 13
+
+Test Case #40
+Postfix Length: 9
+Infix Expression: ((((3-0)*4)-9)*5)
+Postfix Expression: 30-4*9-5*
+MIPS Answer: 15
+C++ Answer: 15
+
+Test Case #41
+Postfix Length: 5
+Infix Expression: ((0-4)+9)
+Postfix Expression: 04-9+
+MIPS Answer: 5
+C++ Answer: 5
+
+Test Case #42
+Postfix Length: 9
+Infix Expression: ((((3*5)-5)*1)+4)
+Postfix Expression: 35*5-1*4+
+MIPS Answer: 14
+C++ Answer: 14
+
+Test Case #43
+Postfix Length: 9
+Infix Expression: ((1+(8*9))-(0-4))
+Postfix Expression: 189*+04--
+MIPS Answer: 77
+C++ Answer: 77
+
+Test Case #44
+Postfix Length: 3
+Infix Expression: (7+5)
+Postfix Expression: 75+
+MIPS Answer: 12
+C++ Answer: 12
+
+Test Case #45
+Postfix Length: 11
+Infix Expression: ((((0+(3+0))*2)-9)*0)
+Postfix Expression: 030++2*9-0*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #46
+Postfix Length: 3
+Infix Expression: (7*7)
+Postfix Expression: 77*
+MIPS Answer: 49
+C++ Answer: 49
+
+Test Case #47
+Postfix Length: 11
+Infix Expression: (((5+((7-1)*5))+1)*2)
+Postfix Expression: 571-5*+1+2*
+MIPS Answer: 72
+C++ Answer: 72
+
+Test Case #48
+Postfix Length: 9
+Infix Expression: (((8-7)+7)*(2*7))
+Postfix Expression: 87-7+27**
+MIPS Answer: 112
+C++ Answer: 112
+
+Test Case #49
+Postfix Length: 11
+Infix Expression: (((9*((8+8)-0))+3)-8)
+Postfix Expression: 988+0-*3+8-
+MIPS Answer: 139
+C++ Answer: 139
+
+Test Case #50
+Postfix Length: 9
+Infix Expression: ((5+(8-(6*7)))-4)
+Postfix Expression: 5867*-+4-
+MIPS Answer: -33
+C++ Answer: -33
+
+Test Case #51
+Postfix Length: 5
+Infix Expression: ((1-0)*1)
+Postfix Expression: 10-1*
+MIPS Answer: 1
+C++ Answer: 1
+
+Test Case #52
+Postfix Length: 3
+Infix Expression: (7-6)
+Postfix Expression: 76-
+MIPS Answer: 1
+C++ Answer: 1
+
+Test Case #53
+Postfix Length: 7
+Infix Expression: (9+((2+2)*4))
+Postfix Expression: 922+4*+
+MIPS Answer: 25
+C++ Answer: 25
+
+Test Case #54
+Postfix Length: 5
+Infix Expression: ((9*0)+8)
+Postfix Expression: 90*8+
+MIPS Answer: 8
+C++ Answer: 8
+
+Test Case #55
+Postfix Length: 3
+Infix Expression: (2+5)
+Postfix Expression: 25+
+MIPS Answer: 7
+C++ Answer: 7
+
+Test Case #56
+Postfix Length: 5
+Infix Expression: ((8*1)+3)
+Postfix Expression: 81*3+
+MIPS Answer: 11
+C++ Answer: 11
+
+Test Case #57
+Postfix Length: 3
+Infix Expression: (9*8)
+Postfix Expression: 98*
+MIPS Answer: 72
+C++ Answer: 72
+
+Test Case #58
+Postfix Length: 3
+Infix Expression: (1-9)
+Postfix Expression: 19-
+MIPS Answer: -8
+C++ Answer: -8
+
+Test Case #59
+Postfix Length: 11
+Infix Expression: ((3+(6+2))+(7+(6-3)))
+Postfix Expression: 362++763-++
+MIPS Answer: 21
+C++ Answer: 21
+
+Test Case #60
+Postfix Length: 5
+Infix Expression: (4*(4-6))
+Postfix Expression: 446-*
+MIPS Answer: -8
+C++ Answer: -8
+
+Test Case #61
+Postfix Length: 5
+Infix Expression: ((7*7)+8)
+Postfix Expression: 77*8+
+MIPS Answer: 57
+C++ Answer: 57
+
+Test Case #62
+Postfix Length: 3
+Infix Expression: (0+8)
+Postfix Expression: 08+
+MIPS Answer: 8
+C++ Answer: 8
+
+Test Case #63
+Postfix Length: 5
+Infix Expression: (8*(9-7))
+Postfix Expression: 897-*
+MIPS Answer: 16
+C++ Answer: 16
+
+Test Case #64
+Postfix Length: 5
+Infix Expression: ((0*1)+3)
+Postfix Expression: 01*3+
+MIPS Answer: 3
+C++ Answer: 3
+
+Test Case #65
+Postfix Length: 7
+Infix Expression: (((1+2)+2)*7)
+Postfix Expression: 12+2+7*
+MIPS Answer: 35
+C++ Answer: 35
+
+Test Case #66
+Postfix Length: 7
+Infix Expression: (((0-6)+1)*4)
+Postfix Expression: 06-1+4*
+MIPS Answer: -20
+C++ Answer: -20
+
+Test Case #67
+Postfix Length: 5
+Infix Expression: (2+(7-8))
+Postfix Expression: 278-+
+MIPS Answer: 1
+C++ Answer: 1
+
+Test Case #68
+Postfix Length: 11
+Infix Expression: ((((3*(2*7))+4)+9)-7)
+Postfix Expression: 327**4+9+7-
+MIPS Answer: 48
+C++ Answer: 48
+
+Test Case #69
+Postfix Length: 5
+Infix Expression: ((4-4)+9)
+Postfix Expression: 44-9+
+MIPS Answer: 9
+C++ Answer: 9
+
+Test Case #70
+Postfix Length: 5
+Infix Expression: ((2+3)-0)
+Postfix Expression: 23+0-
+MIPS Answer: 5
+C++ Answer: 5
+
+Test Case #71
+Postfix Length: 9
+Infix Expression: ((((5+5)*7)+1)*1)
+Postfix Expression: 55+7*1+1*
+MIPS Answer: 71
+C++ Answer: 71
+
+Test Case #72
+Postfix Length: 3
+Infix Expression: (5-6)
+Postfix Expression: 56-
+MIPS Answer: -1
+C++ Answer: -1
+
+Test Case #73
+Postfix Length: 5
+Infix Expression: (1*(7-3))
+Postfix Expression: 173-*
+MIPS Answer: 4
+C++ Answer: 4
+
+Test Case #74
+Postfix Length: 7
+Infix Expression: ((2*1)-(6+0))
+Postfix Expression: 21*60+-
+MIPS Answer: -4
+C++ Answer: -4
+
+Test Case #75
+Postfix Length: 3
+Infix Expression: (3*7)
+Postfix Expression: 37*
+MIPS Answer: 21
+C++ Answer: 21
+
+Test Case #76
+Postfix Length: 7
+Infix Expression: (((6+6)*6)*0)
+Postfix Expression: 66+6*0*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #77
+Postfix Length: 11
+Infix Expression: (6*((((7*8)+5)*8)*0))
+Postfix Expression: 678*5+8*0**
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #78
+Postfix Length: 11
+Infix Expression: (((((2+0)*4)-4)+9)*1)
+Postfix Expression: 20+4*4-9+1*
+MIPS Answer: 13
+C++ Answer: 13
+
+Test Case #79
+Postfix Length: 7
+Infix Expression: ((0+5)*(0-5))
+Postfix Expression: 05+05-*
+MIPS Answer: -25
+C++ Answer: -25
+
+Test Case #80
+Postfix Length: 11
+Infix Expression: ((1*(3+0))-((5*8)-0))
+Postfix Expression: 130+*58*0--
+MIPS Answer: -37
+C++ Answer: -37
+
+Test Case #81
+Postfix Length: 5
+Infix Expression: ((5+8)-0)
+Postfix Expression: 58+0-
+MIPS Answer: 13
+C++ Answer: 13
+
+Test Case #82
+Postfix Length: 3
+Infix Expression: (6-7)
+Postfix Expression: 67-
+MIPS Answer: -1
+C++ Answer: -1
+
+Test Case #83
+Postfix Length: 3
+Infix Expression: (5*1)
+Postfix Expression: 51*
+MIPS Answer: 5
+C++ Answer: 5
+
+Test Case #84
+Postfix Length: 11
+Infix Expression: (((((7*1)*2)+0)-1)*0)
+Postfix Expression: 71*2*0+1-0*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #85
+Postfix Length: 11
+Infix Expression: ((((5*(6-4))-9)*9)+0)
+Postfix Expression: 564-*9-9*0+
+MIPS Answer: 9
+C++ Answer: 9
+
+Test Case #86
+Postfix Length: 9
+Infix Expression: ((((4-2)*5)+8)+3)
+Postfix Expression: 42-5*8+3+
+MIPS Answer: 21
+C++ Answer: 21
+
+Test Case #87
+Postfix Length: 5
+Infix Expression: ((0*5)*0)
+Postfix Expression: 05*0*
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #88
+Postfix Length: 9
+Infix Expression: ((4-((6*1)+2))-4)
+Postfix Expression: 461*2+-4-
+MIPS Answer: -8
+C++ Answer: -8
+
+Test Case #89
+Postfix Length: 3
+Infix Expression: (4*8)
+Postfix Expression: 48*
+MIPS Answer: 32
+C++ Answer: 32
+
+Test Case #90
+Postfix Length: 11
+Infix Expression: ((4-4)*((1-(9*9))*2))
+Postfix Expression: 44-199*-2**
+MIPS Answer: 0
+C++ Answer: 0
+
+Test Case #91
+Postfix Length: 5
+Infix Expression: ((2*9)*4)
+Postfix Expression: 29*4*
+MIPS Answer: 72
+C++ Answer: 72
+
+Test Case #92
+Postfix Length: 3
+Infix Expression: (5*6)
+Postfix Expression: 56*
+MIPS Answer: 30
+C++ Answer: 30
+
+Test Case #93
+Postfix Length: 3
+Infix Expression: (4-8)
+Postfix Expression: 48-
+MIPS Answer: -4
+C++ Answer: -4
+
+Test Case #94
+Postfix Length: 3
+Infix Expression: (2*7)
+Postfix Expression: 27*
+MIPS Answer: 14
+C++ Answer: 14
+
+Test Case #95
+Postfix Length: 3
+Infix Expression: (3*6)
+Postfix Expression: 36*
+MIPS Answer: 18
+C++ Answer: 18
+
+Test Case #96
+Postfix Length: 5
+Infix Expression: ((6*0)+5)
+Postfix Expression: 60*5+
+MIPS Answer: 5
+C++ Answer: 5
+
+Test Case #97
+Postfix Length: 9
+Infix Expression: ((((6-4)+6)*5)-0)
+Postfix Expression: 64-6+5*0-
+MIPS Answer: 40
+C++ Answer: 40
+
+Test Case #98
+Postfix Length: 9
+Infix Expression: (((4+(4*1))*6)*6)
+Postfix Expression: 441*+6*6*
+MIPS Answer: 288
+C++ Answer: 288
+
+Test Case #99
+Postfix Length: 7
+Infix Expression: (((7-6)*6)*7)
+Postfix Expression: 76-6*7*
+MIPS Answer: 42
+C++ Answer: 42
+
+Test Case #100
+Postfix Length: 11
+Infix Expression: (((6+8)*(2-6))*(5+2))
+Postfix Expression: 68+26-*52+*
+MIPS Answer: -392
+C++ Answer: -392
+
+Test Case #101
+Postfix Length: 9
+Infix Expression: ((((0-7)+1)*3)*7)
+Postfix Expression: 07-1+3*7*
+MIPS Answer: -126
+C++ Answer: -126
+
